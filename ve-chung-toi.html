@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Về chúng tôi</title>
+</head>
+<style>
+    html {
+        line-height: 1.5;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+
+    input,
+    textarea,
+    select,
+    button {
+        outline: none;
+        font: inherit;
+    }
+
+    input {
+        line-height: normal;
+    }
+
+    label,
+    button {
+        cursor: poInter;
+        user-select: none !important;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    img,
+    picture,
+    video,
+    canvas,
+    svg {
+        display: block;
+        max-width: 100%;
+        user-select: none !important;
+    }
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        overflow-wrap: break-word;
+    }
+
+    /* Mobie: width < 740px */
+    @media only screen and (max-width: 46.1875em) {
+
+        input[type="color"],
+        input[type="date"],
+        input[type="datetime"],
+        input[type="datetime-local"],
+        input[type="email"],
+        input[type="month"],
+        input[type="number"],
+        input[type="password"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="text"],
+        input[type="time"],
+        input[type="url"],
+        input[type="week"],
+        select:focus,
+        textarea {
+            font-size: 16px;
+        }
+    }
+
+    @font-face {
+        font-family: 'Inter';
+        src: url('../fonts/Inter-Light.ttf') format('ttf');
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Inter';
+        src: url('../fonts/Inter-Regular.ttf') format('ttf');
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Inter';
+        src: url('../fonts/Inter-Medium.ttf') format('ttf');
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Inter';
+        src: url('../fonts/Inter-SemiBold.ttf') format('ttf');
+        font-weight: 600;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Inter';
+        src: url('../fonts/Inter-Bold.ttf') format('ttf');
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'InterExtraBold';
+        src: url('../fonts/Inter-SemiBold.ttf') format('ttf');
+        font-weight: 600;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'InterExtraBold';
+        src: url('../fonts/Inter-ExtraBold.ttf') format('ttf');
+        font-weight: 800;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'InterExtraBold';
+        src: url('../fonts/Inter-ExtraBold.ttf') format('ttf');
+        font-weight: 800;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Inter-Black';
+        src: url('../fonts/Inter-Black.ttf') format('ttf');
+        font-weight: 900;
+        font-style: normal;
+    }
+
+    :root {
+        --primary-bg: #FFF;
+        --primary-cl: #000;
+    }
+
+    body {
+        background-color: var(--primary-bg);
+        color: var(--primary-cl);
+        font-size: 15px;
+        font-family: 'Inter', sans-serif;
+        ;
+        font-weight: 400;
+    }
+
+    .container {
+        display: block;
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 80px;
+    }
+
+    .container-content {
+        display: block;
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .header {
+        width: 100%;
+        height: 90px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-shrink: 0;
+    }
+
+    .navbar {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .navbar .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar .nav-list {
+        display: flex;
+        align-items: center;
+        gap: 34px;
+    }
+
+    .navbar .nav-link {
+        color: var(--primary-cl);
+        transition: linear 0.25s;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .navbar .nav-link:hover {
+        color: #0284A4;
+    }
+
+    .header-banner-info {
+        margin-top: 6px;
+        margin-bottom: 107px;
+    }
+
+    .header-banner-info .banner-img-top {
+        width: 100%;
+        max-width: 900px;
+        height: 430px;
+        flex-shrink: 0;
+    }
+
+    .header-banner-info .info-title {
+        margin-top: 37px;
+        margin-bottom: 122px;
+        text-align: center;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -1px;
+    }
+    .header-banner-info .info-title-children{
+        color: #000;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 44px;
+    }
+    .info-text-list{
+        margin-top: 40px;
+    }
+    .info-text-list>li{
+        list-style-type: disc;
+        color: #555;
+        text-align: justify;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 33px; 
+    }
+
+    .core-values{
+        padding-top: 84px;
+        padding-bottom: 89px;
+        height: 464px;
+        flex-shrink: 0;
+        background-color: #F2F2F2;
+    }
+    .title-core-values{
+        display: flex;
+        width: 227px;
+        height: 46px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #FFF;
+        background-color: #0D7D96;
+        text-align: center;
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 38.5px; 
+    }
+    .content-img-core-values {
+        margin-top: 58px;
+        width: 870px;
+        height: 212px;
+    }
+    .vision-mission{
+        padding-top: 93px;
+        padding-bottom: 76px;
+    }
+    .title-v-m{
+        margin-bottom: 59px;
+        color: #000;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 44px ;
+    }
+    .img-v-m{
+        width: 100%;
+        max-width: 849px;
+        height: 275px;
+        border-radius: 8px;
+        flex-shrink: 0;
+    }
+    .v-m-list{
+        margin-top: 59px;
+    }
+    .v-m-list>li{
+        list-style-type: disc;
+        color: #555;
+        text-align: justify;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 33px; 
+    }
+    .product-system{
+        padding-top: 68px;
+        padding-bottom: 100px;
+        width: 100%;
+        max-width: 1440px;
+        height: 926px;
+        flex-shrink: 0;
+        background-color: #F2F2F2;
+    }
+    .title-product-system{
+        position: relative;
+        left: 52px;
+        color: #000;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 44px; 
+    }
+    .content-product-system{
+        gap: 34px;
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+    }
+    .content-product-system-left{
+        gap: 38px;
+        display: flex;
+        flex-direction: column;
+        width: 479px;
+        height: 664px;
+        
+    }
+    .content-product-system-left .system-left-top{
+        display: flex;
+        width: 479px;
+        height: 181px;
+        padding: 25px 36px 20px 35px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+        flex-shrink: 0;
+        border-radius: 12px;
+        background-color: #FFF;
+        box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.10), 0px 0px 15px 0px rgba(0, 0, 0, 0.10);
+    }
+    .content-product-system-left .system-left-top .title-system-left-top{
+        color: #000;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.64px;
+    }
+    .content-system-left-top{
+        color: #555;
+        text-align: justify;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 33px;
+    }
+    .content-product-system-left .system-left-bottom{
+        display: flex;
+        width: 479px;
+        height: 445px;
+        padding: 25px 36px 20px 35px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+        flex-shrink: 0;
+        border-radius: 12px;
+        background-color: #FFF;
+        box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.10), 0px 0px 15px 0px rgba(0, 0, 0, 0.10);
+    }
+    .title-system-left-bottom{
+        color: #000;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.64px;
+    }
+    .content-system-left-bottom{
+        color: #555;
+        text-align: justify;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 33px;
+    }
+    .content-product-system-right{
+        gap: 38px;
+        display: flex;
+        flex-direction: column;
+        width: 479px;
+        height: 664px;
+    }
+    .content-product-system-right .system-right-top{
+        display: flex;
+        width: 479px;
+        height: 424px;
+        padding: 25px 36px 20px 35px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+        flex-shrink: 0;
+        border-radius: 12px;
+        background-color: #FFF;
+        box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.10), 0px 0px 15px 0px rgba(0, 0, 0, 0.10);
+    }
+    .content-product-system-right .system-right-top .title-system-right-top{
+        color: #000;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.64px;
+    }
+    .content-product-system-right .system-right-top .content-system-right-bottom{
+        color: #555;
+        text-align: justify;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 33px;
+    }
+    .content-product-system-right .system-right-bottom{
+        display: flex;
+        width: 479px;
+        height: 202px;
+        padding: 25px 36px 20px 35px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+        flex-shrink: 0;
+        border-radius: 12px;
+        background-color: #FFF;
+        box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.10), 0px 0px 15px 0px rgba(0, 0, 0, 0.10);
+    }
+    .content-product-system-right .title-system-right-bottom-top{
+        color: #000;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.64px;
+    }
+    .content-product-system-right .system-right-bottom .content-system-right-bottom-top{
+        color: #555;
+        text-align: justify;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 33px;
+    }
+
+    .projects{
+        padding-top: 86px;
+        padding-bottom: 198px;
+    }
+    .projects .title-projects{
+        position: relative;
+        left: 52px;
+        color: #000;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 44px; 
+    }
+    .projects .content-projects{
+        margin-top: 66px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 96px;
+    }
+    .content-projects .content-projects-left .content-projects-left-icon{
+        width: 96px;
+        height: auto;
+        flex-shrink: 0;
+    }
+    .content-projects .content-projects-right{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    .content-projects .content-projects-right-top{
+        color: #000;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 48px ; 
+    }
+    .content-projects .content-projects-right-bottom{
+        color: #555;
+        text-align: justify;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 33px;
+    }
+    .footer {
+        border-top: 1px solid #E6E6E6;
+        padding-top: 45px;
+        padding-bottom: 51px;
+        background-color: #F9F9F9;
+        width: 100%;
+        max-width: 1440px;
+        height: 264px;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer .footer-left-content {
+        width: 406px;
+    }
+
+    .footer .footer-left-content .footer-left-top .footer-left-top-title {
+        color: #000;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 30px;
+        letter-spacing: -0.4px;
+    }
+
+    .footer-left-bottom-content {
+        margin-top: 8px;
+        color: #000;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22.5px;
+        letter-spacing: -0.3px;
+    }
+
+    .footer-center-content {
+        display: flex;
+        width: 100%;
+        max-width: 301px;
+        flex-direction: column;
+    }
+
+    .footer-center-bottom-content {
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .footer-center-bottom-txt {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .footer-center-bottom-txt .footer-link-center-bottom-txt {
+        color: #000;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22.5px;
+        letter-spacing: -0.3px;
+    }
+
+    .footer-center-bottom-txt .footer-center-bottom-icon {
+        width: 25px;
+        height: 25px;
+        flex-shrink: 0;
+        border-radius: 100%;
+    }
+
+    .footer-right-content {
+        width: 100%;
+        max-width: 263px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-right-top-title {
+        color: #000;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 25.5px;
+        letter-spacing: -0.34px;
+    }
+
+    .footer-right-top-bottom {
+        margin-top: 19px;
+        display: flex;
+        gap: 25px;
+    }
+
+    .footer-right-top-bottom-left {
+        color: #000;
+        text-align: center;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22.5px;
+        letter-spacing: -0.3px;
+    }
+
+    .footer-right-top-bottom-left .footer-img-barcode-one {
+        margin-top: 6px;
+        width: 84px;
+        height: 81px;
+        flex-shrink: 0;
+    }
+
+    .footer-right-top-bottom-right {
+        color: #000;
+        text-align: center;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22.5px;
+        letter-spacing: -0.3px;
+    }
+
+    .footer-right-top-bottom-right .footer-img-barcode-one {
+        margin-top: 6px;
+        width: 84px;
+        height: 81px;
+        flex-shrink: 0;
+    }
+</style>
+
+<body>
+    <header class="header container">
+        <nav class="navbar">
+            <a href="./index.html" class="logo">
+                <img src="./assets/images/Logo.svg" width="216" height="47" alt="Logo thời đại khai phóng" title="Logo thời đại khai phóng" loading="lazy" decoding="async" />
+            </a>
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="./ve-chung-toi.html" title="Về chúng tôi" class="nav-link">Về chúng tôi</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./tu-sach-thoi-dai-khai-phong.html" title="Tủ sách TĐKP" class="nav-link">Tủ sách TĐKP</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./he-thong-cac-khoa-hoc.html" title="Hệ thống khóa học" class="nav-link">Hệ thống khóa học</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" title="Dự án" class="nav-link">Dự án</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" title="Hợp tác" class="nav-link">Hợp tác</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" title="Người lãnh đạo Khai Phóng" class="nav-link">Người lãnh đạo Khai Phóng</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <seciton class="header-banner-info container-content">
+        <img src="./assets/images/banner-info.png" alt="" class="banner-img-top container-content">
+        <h1 class="info-title">Công ty cổ phần Thời Đại Khai Phóng</h1>
+        <h2 class="info-title-children">Tổng quan</h2>
+        <ul class="info-text-list">
+            <li>Công ty Cổ phần Thời Đại Khai Phóng được Sáng lập vào Tháng 5/2024, 
+                sự sáp nhập và thống nhất các Ý tưởng, Giá trị và Nguồn lực của 3 Công ty: 
+                Công ty Cổ phần Tâm Khai sáng (Thành lập năm 2016), Công ty Cổ phần Giáo dục Đích thực 
+                (Thành lập năm 2020) và Công ty Cổ phần Trực Tâm (Thành lập năm 2023).</li>
+            <li>Quy mô Nhân sự ở thời điểm Tháng 5/2024: 30 nhân sự.</li>
+        </ul>
+    </seciton>
+    <section class="core-values container">
+        <h1 class="title-core-values container-content">Giá trị cốt lõi</h1>
+        <img src="./assets/images/content-core-values.png" alt="" class="content-img-core-values container-content">
+    </section>
+    <section class="vision-mission container-content">
+        <h2 class="title-v-m">Tầm nhìn và sứ mệnh</h2>
+        <img src="./assets/images/img-vision-mission.png" alt="" class="img-v-m">
+        <ul class="v-m-list">
+            <li>Định hướng, Thúc đẩy và cùng với các tổ chức hay cá nhân khác góp phần Xây dựng một Hệ sinh thái 
+                Khai phóng ở quy mô Toàn dân – Toàn diện – Toàn cầu, với mục tiêu năm 2051 đạt được 1 tỷ người tham gia học tập, 
+                trải nghiệm và làm việc trong Hệ sinh thái Khai phóng.
+            </li>
+            <li>Định hướng, Thúc đẩy và cùng với các tổ chức hay cá nhân khác góp phần Xây dựng dân tộc Việt Nam trở thành một 
+                “Dân tộc Bậc Thầy”, với mục tiêu năm 2051 đạt được 1 triệu người Việt Nam làm việc trong các tư cách Giáo viên 
+                Khai phóng, Chuyên gia Khai phóng hay Bậc thầy Khai phóng.
+            </li>
+            <li>Định hướng, Thúc đẩy và cùng với các tổ chức, cá nhân khác góp phần Định hình Thế kỷ XXI của nhân loại trở thành 
+                Thời đại Khai phóng, đưa Tinh thần Khai phóng vào và tạo ra sự thay đổi sâu sắc trong tất cả các lĩnh vực quan 
+                trọng trong đời sống xã hội như Giáo dục, Kinh tế, Văn hóa, Nghệ thuật, Khoa học Kỹ thuật…
+            </li>
+        </ul>
+    </section>
+    <seciton class="product-system container">
+        <h1 class="title-product-system container-content">
+            Hệ thống sản phẩm
+        </h1>
+        <div class="content-product-system container-content">
+            <div class="content-product-system-left">
+                <div class="system-left-top">
+                    <h3 class="title-system-left-top">Sản phẩm Phụ trợ</h3>
+                    <p class="content-system-left-top">Tủ sách Thời Đại Khai Phóng</p>
+                </div>
+                <div class="system-left-bottom">
+                    <h3 class="title-system-left-bottom">Sản phẩm Chuyên sâu</h3>
+                    <p class="content-system-left-bottom">Ba Hệ thống Khóa học phát triển Năng lực Trí tuệ, 
+                        Năng lực Tâm thức, Năng lực Văn hóa. Các mức độ cơ bản được triển khai Trực tuyến trên nền tảng app Trực Tâm ,
+                        và các mức độ dành cho Chuyên gia sẽ được triển khai trong Hệ thống Đào tạo nội bộ và Hệ thống Đào tạo Bậc Thầy.
+                    </p>
+                </div>
+            </div>
+            <div class="content-product-system-right">
+                <div class="system-right-top">
+                    <h3 class="title-system-right-top">Sản phẩm Phổ cập</h3>
+                    <p class="content-system-right-bottom">Ba Hệ thống Khóa học phát triển Năng lực Hạnh phúc, 
+                        Năng lực Tự chủ và Năng lực Khai phóng, được triển khai trên nền tảng app Khai phóng, 
+                        dưới định dạng những bài học và thực hành thú vị, linh hoạt, thực tiễn, 
+                        có tính hiệu quả cao và có thể dễ dàng tiếp cận tới hàng triệu người học không phân biệt tuổi tác, 
+                        trình độ, ngôn ngữ, văn hóa, vùng miền.
+                    </p>
+                </div>
+                <div class="system-right-bottom">
+                    <h3 class="title-system-right-bottom-top">Sản phẩm Cao cấp</h3>
+                    <p class="content-system-right-bottom-top">Bộ Khóa học cao cấp, đặc biệt, riêng biệt dành cho Doanh nhân, 
+                        Lãnh đạo, Chuyên gia, Bậc thầy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </seciton>
+    <section class="projects container">
+        <h1 class="title-projects container-content">
+            Các dự án
+        </h1>
+        <div class="content-projects container-content">
+            <div class="content-projects-left">
+                <img src="./assets/images/icon-sologan-one.png" alt="" class="content-projects-left-icon">
+            </div>
+            <div class="content-projects-right">
+                <div class="content-projects-right-top">
+                    Dự án Trực Tâm
+                </div>
+                <div class="content-projects-right-bottom">
+                    Dự án Mạng Cộng đồng Chuyển hóa trực tuyến trong sạch, 
+                    lành mạnh, tử tế và giàu có các giá trị nhân văn cho con người.
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer container">
+        <div class="footer-left-content">
+            <div class="footer-left-top">
+                <h2 class="footer-left-top-title">CÔNG TY CỔ PHẦN THỜI ĐẠI KHAI PHÓNG</h2>
+            </div>
+            <div class="footer-left-bottom-content">
+                <p class="footer-left-bottom-txt">
+                    Mã số thuế: 0110447062</br>
+                    Địa chỉ: S202S30 Solforest 2, Khu đô thị Ecopark</br>
+                    Email: tructamjsc@gmail.com</br>
+                    Hotline: 0773.393.393
+                </p>
+            </div>
+        </div>
+        <div class="footer-center-content">
+            <div class="footer-center-top">
+                <h2 class="footer-center-top-title">Trang liên kết</h2>
+            </div>
+            <div class="footer-center-bottom-content">
+                <div class="footer-center-bottom-txt">
+                    <img src="./assets/images/icon-footer-one.png" alt="" class="footer-center-bottom-icon">
+                    <a class="footer-link-center-bottom-txt">Fanpage Tâm Khai Sáng</a>
+                </div>
+                <div class="footer-center-bottom-txt">
+                    <img src="./assets/images/icon-footer-two.png" alt="" class="footer-center-bottom-icon">
+                    <a class="footer-link-center-bottom-txt">Fanpage Sự học Đích thực</a>
+                </div>
+                <div class="footer-center-bottom-txt">
+                    <img src="./assets/images/icon-footer-three.png" alt="" class="footer-center-bottom-icon">
+                    <a class="footer-link-center-bottom-txt">Fanpage Tủ sách Thời Đại Khai Phóng</a>
+                </div>
+                <div class="footer-center-bottom-txt">
+                    <img src="./assets/images/icon-footer-four.png" alt="" class="footer-center-bottom-icon">
+                    <a class="footer-link-center-bottom-txt">Mạng cộng đồng Trực Tâm</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-right-content">
+            <div class="footer-right-top-content">
+                <h2 class="footer-right-top-title">Quét mã QR để tải Ứng dụng</h2>
+            </div>
+            <div class="footer-right-top-bottom">
+                <div class="footer-right-top-bottom-left">
+                    Trực Tâm
+                    <img src="./assets/images/qrcode-truc-tam.png" alt="Qrcode trực tâm" class="footer-img-barcode-one">
+                </div>
+                <div class="footer-right-top-bottom-right">
+                    Khai Phóng
+                    <img src="./assets/images/qrcode-khai-phong.png" alt="Qrcode khai phong"
+                        class="footer-img-barcode-one">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
