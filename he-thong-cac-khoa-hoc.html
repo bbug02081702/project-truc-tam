@@ -408,13 +408,41 @@
         height: 81px;
         flex-shrink: 0;
     }
+
+    .go-top {
+        position: fixed;
+        bottom: 335px;
+        right: 133px;
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        display: grid;
+        place-items: center;
+        font-size: 18px;
+        box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.5);
+        opacity: 0;
+        transform: translateY(10px);
+        visibility: hidden;
+        transition: var(--transition);
+    }
+
+    .go-top.active {
+        opacity: 0.8;
+        transform: translateY(0);
+        visibility: visible;
+    }
+
+    .go-top:is(:hover, :focus) {
+        opacity: 1;
+    }
 </style>
 
 <body>
-    <header class="header container">
+    <header class="header container" data-header>
         <nav class="navbar">
             <a href="./index.html" class="logo">
-                <img src="./assets/images/Logo.svg" width="216" height="47" alt="Logo thời đại khai phóng" title="Logo thời đại khai phóng" loading="lazy" decoding="async" />
+                <img src="./assets/images/Logo.svg" width="216" height="47" alt="Logo thời đại khai phóng"
+                    title="Logo thời đại khai phóng" loading="lazy" decoding="async" />
             </a>
             <ul class="nav-list">
                 <li class="nav-item">
@@ -424,7 +452,8 @@
                     <a href="./tu-sach-thoi-dai-khai-phong.html" title="Tủ sách TĐKP" class="nav-link">Tủ sách TĐKP</a>
                 </li>
                 <li class="nav-item">
-                    <a href="./he-thong-cac-khoa-hoc.html" title="Hệ thống khóa học" class="nav-link">Hệ thống khóa học</a>
+                    <a href="./he-thong-cac-khoa-hoc.html" title="Hệ thống khóa học" class="nav-link">Hệ thống khóa
+                        học</a>
                 </li>
                 <li class="nav-item">
                     <a href="./du-an.html" title="Dự án" class="nav-link">Dự án</a>
@@ -433,7 +462,8 @@
                     <a href="./hop-tac.html" title="Hợp tác" class="nav-link">Hợp tác</a>
                 </li>
                 <li class="nav-item">
-                    <a href="./nguoi-lanh-dao-khai-phong.html" title="Người lãnh đạo Khai Phóng" class="nav-link">Người lãnh đạo Khai Phóng</a>
+                    <a href="./nguoi-lanh-dao-khai-phong.html" title="Người lãnh đạo Khai Phóng" class="nav-link">Người
+                        lãnh đạo Khai Phóng</a>
                 </li>
             </ul>
         </nav>
@@ -531,7 +561,26 @@
                 </div>
             </div>
         </div>
+        <a href="#top" class="go-top" data-go-top>
+            <img src="./assets/images/icon-scroll-top-hd.svg" alt="">
+        </a>
     </footer>
+    <script>
+        const header = document.querySelector("[data-header]");
+        const goTopBtn = document.querySelector("[data-go-top]");
+        window.addEventListener("scroll", function () {
+
+            if (window.scrollY >= 222) {
+                header.classList.add("active");
+                goTopBtn.classList.add("active");
+            } else {
+                header.classList.remove("active");
+                goTopBtn.classList.remove("active");
+            }
+
+        });
+
+    </script>
 </body>
 
 </html>

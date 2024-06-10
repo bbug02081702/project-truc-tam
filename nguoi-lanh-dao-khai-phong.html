@@ -178,7 +178,7 @@
         padding: 0 80px;
     }
 
-    .container-content-grid-leader{
+    .container-content-grid-leader {
         display: block;
         width: 100%;
         max-width: 1440px;
@@ -242,15 +242,17 @@
         line-height: normal;
         letter-spacing: -1px;
     }
-    .leader-container  .text-content-leader{
+
+    .leader-container .text-content-leader {
         color: #555;
         text-align: justify;
         font-size: 22px;
         font-style: normal;
         font-weight: 500;
-        line-height: 33px; 
+        line-height: 33px;
     }
-    .leader-container .img-leader{
+
+    .leader-container .img-leader {
         margin-right: 54px;
         border-radius: 8px;
         float: left;
@@ -387,13 +389,41 @@
         height: 81px;
         flex-shrink: 0;
     }
+
+    .go-top {
+        position: fixed;
+        bottom: 335px;
+        right: 133px;
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        display: grid;
+        place-items: center;
+        font-size: 18px;
+        box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.5);
+        opacity: 0;
+        transform: translateY(10px);
+        visibility: hidden;
+        transition: var(--transition);
+    }
+
+    .go-top.active {
+        opacity: 0.8;
+        transform: translateY(0);
+        visibility: visible;
+    }
+
+    .go-top:is(:hover, :focus) {
+        opacity: 1;
+    }
 </style>
 
 <body>
-    <header class="header container">
+    <header class="header container" data-header>
         <nav class="navbar">
             <a href="./index.html" class="logo">
-                <img src="./assets/images/Logo.svg" width="216" height="47" alt="Logo thời đại khai phóng" title="Logo thời đại khai phóng" loading="lazy" decoding="async" />
+                <img src="./assets/images/Logo.svg" width="216" height="47" alt="Logo thời đại khai phóng"
+                    title="Logo thời đại khai phóng" loading="lazy" decoding="async" />
             </a>
             <ul class="nav-list">
                 <li class="nav-item">
@@ -403,7 +433,8 @@
                     <a href="./tu-sach-thoi-dai-khai-phong.html" title="Tủ sách TĐKP" class="nav-link">Tủ sách TĐKP</a>
                 </li>
                 <li class="nav-item">
-                    <a href="./he-thong-cac-khoa-hoc.html" title="Hệ thống khóa học" class="nav-link">Hệ thống khóa học</a>
+                    <a href="./he-thong-cac-khoa-hoc.html" title="Hệ thống khóa học" class="nav-link">Hệ thống khóa
+                        học</a>
                 </li>
                 <li class="nav-item">
                     <a href="./du-an.html" title="Dự án" class="nav-link">Dự án</a>
@@ -412,7 +443,8 @@
                     <a href="./hop-tac.html" title="Hợp tác" class="nav-link">Hợp tác</a>
                 </li>
                 <li class="nav-item">
-                    <a href="./nguoi-lanh-dao-khai-phong.html" title="Người lãnh đạo Khai Phóng" class="nav-link">Người lãnh đạo Khai Phóng</a>
+                    <a href="./nguoi-lanh-dao-khai-phong.html" title="Người lãnh đạo Khai Phóng" class="nav-link">Người
+                        lãnh đạo Khai Phóng</a>
                 </li>
             </ul>
         </nav>
@@ -422,38 +454,50 @@
         <div class="leader-container">
             <p class="text-content-leader">
                 <img src="./assets/images/banner-leader.png" alt="" class="img-leader">
-                “Thời Đại Khai phóng” là một ý tưởng, một cái tên, một Dự án, một Doanh nghiệp, 
-                một Xu hướng Xã hội, hay thực sự sẽ là một Trang sử vinh quang của Đất nước, 
+                “Thời Đại Khai phóng” là một ý tưởng, một cái tên, một Dự án, một Doanh nghiệp,
+                một Xu hướng Xã hội, hay thực sự sẽ là một Trang sử vinh quang của Đất nước,
                 của Nhân loại? Điều ấy phụ thuộc rất nhiều vào những người Lãnh đạo nó.</br></br>
-                Và, trong vô số những con người có tầm vóc đã, đang và sẽ tham gia Lãnh đạo công cuộc Khai phóng này, 
-                kiến tạo nên Thời đại này, có một con người mà ngay từ 20 năm trước đã đặt Quyết tâm, đã dồn hết Tâm huyết, 
-                dồn hết Ý chí và Nghị lực, đã dồn hết Trí tuệ và sự Tinh anh, đã dồn hết sự Bền bỉ và Kiên cường để thúc đẩy, 
+                Và, trong vô số những con người có tầm vóc đã, đang và sẽ tham gia Lãnh đạo công cuộc Khai phóng này,
+                kiến tạo nên Thời đại này, có một con người mà ngay từ 20 năm trước đã đặt Quyết tâm, đã dồn hết Tâm
+                huyết,
+                dồn hết Ý chí và Nghị lực, đã dồn hết Trí tuệ và sự Tinh anh, đã dồn hết sự Bền bỉ và Kiên cường để thúc
+                đẩy,
                 để thực thi công cuộc này ở Ý nghĩa Chân thực nhất, ở Quy mô và Tầm vóc lớn lao nhất.</br></br>
                 Người ấy là một người Thầy – Thầy Trần Thế Công. (Blog: Tranthecong.com)</br></br>
-                Thủa nhỏ, Thầy được biết đến như là một học sinh đặc biệt thông minh và sáng tạo. Đến năm 18 tuổi, 
-                Thầy chọn trở thành một Kỹ sư Cơ khí, với niềm tin rằng việc chế tạo các cỗ máy có thể giúp cho những người lao động đỡ vất vả, cực nhọc. 
-                Sau khi tốt nghiệp và làm việc hơn 1 năm, Thầy nhận ra rằng máy móc không thể giúp đỡ con người bớt khổ đau. 
-                Từ đó, Thầy lựa chọn lại con đường của mình, Con đường Giáo dục và Phát triển con người, 
-                bởi cách tốt nhất để giúp đỡ con người đạt được Hạnh phúc bền vững là giúp họ trở nên Trí tuệ và Đức Hạnh.</br></br>
-                Sau 6 năm tự nghiên cứu, tìm tòi, thực hành, trải nghiệm và đào sâu đến tận gốc rễ vấn đề, Thầy đạt được những Chứng ngộ sâu sắc, 
-                tìm ra được Bản chất chân thật ở con người, tìm ra được Nguồn cội phát sinh của Trí tuệ và Đức hạnh ở con người. 
-                Qua đó, Thầy thông tỏ hoàn toàn con đường để giúp mỗi người trở nên Hạnh phúc hơn. 
-                Con đường đó là con đường Khai phóng Toàn triệt – Khai phóng đến tận gốc rễ tiềm năng To lớn ở con người.</br></br>
-                Những năm 2015, Thầy chính thức bắt tay vào công cuộc kiến tạo Thời đại Khai phóng, và xác định rằng phải xây dựng được 3 Trụ cột cho Thời đại này. 
-                Các trụ cột đó là một Tầm nhìn sâu rộng có khả năng phổ biến tới tất cả mọi người, 
-                đó là những Bậc Thầy – Những biểu tượng Nhân cách – Tư cách để làm nguồn động lực, 
-                làm minh chứng cho tiềm năng Khai phóng ở mỗi con người, 
-                đó là một Hệ thống Doanh nghiệp có khả năng gột rửa và chuyển hóa Tâm trí, lối sống, 
-                thói quen ở con người thông qua công việc. Từ đó đến nay, Thầy vừa là Tổng Công trình sư, 
+                Thủa nhỏ, Thầy được biết đến như là một học sinh đặc biệt thông minh và sáng tạo. Đến năm 18 tuổi,
+                Thầy chọn trở thành một Kỹ sư Cơ khí, với niềm tin rằng việc chế tạo các cỗ máy có thể giúp cho những
+                người lao động đỡ vất vả, cực nhọc.
+                Sau khi tốt nghiệp và làm việc hơn 1 năm, Thầy nhận ra rằng máy móc không thể giúp đỡ con người bớt khổ
+                đau.
+                Từ đó, Thầy lựa chọn lại con đường của mình, Con đường Giáo dục và Phát triển con người,
+                bởi cách tốt nhất để giúp đỡ con người đạt được Hạnh phúc bền vững là giúp họ trở nên Trí tuệ và Đức
+                Hạnh.</br></br>
+                Sau 6 năm tự nghiên cứu, tìm tòi, thực hành, trải nghiệm và đào sâu đến tận gốc rễ vấn đề, Thầy đạt được
+                những Chứng ngộ sâu sắc,
+                tìm ra được Bản chất chân thật ở con người, tìm ra được Nguồn cội phát sinh của Trí tuệ và Đức hạnh ở
+                con người.
+                Qua đó, Thầy thông tỏ hoàn toàn con đường để giúp mỗi người trở nên Hạnh phúc hơn.
+                Con đường đó là con đường Khai phóng Toàn triệt – Khai phóng đến tận gốc rễ tiềm năng To lớn ở con
+                người.</br></br>
+                Những năm 2015, Thầy chính thức bắt tay vào công cuộc kiến tạo Thời đại Khai phóng, và xác định rằng
+                phải xây dựng được 3 Trụ cột cho Thời đại này.
+                Các trụ cột đó là một Tầm nhìn sâu rộng có khả năng phổ biến tới tất cả mọi người,
+                đó là những Bậc Thầy – Những biểu tượng Nhân cách – Tư cách để làm nguồn động lực,
+                làm minh chứng cho tiềm năng Khai phóng ở mỗi con người,
+                đó là một Hệ thống Doanh nghiệp có khả năng gột rửa và chuyển hóa Tâm trí, lối sống,
+                thói quen ở con người thông qua công việc. Từ đó đến nay, Thầy vừa là Tổng Công trình sư,
                 vừa là Kiến trúc sư, vừa là Kỹ sư, và vừa là một hóa thân của những Trụ cột ấy.</br></br>
-                Từ 2016, Thầy bắt đầu viết Bộ sách Thời đại Khai phóng để trang bị tầm nhìn sâu rộng cho con người. 
-                Từ năm 2019, Thầy chính thức xác lập danh xưng “Bậc Thầy” như là một trách nhiệm cá nhân đối với công cuộc Khai phóng. 
-                Thầy là tác giả chính của các Hệ thống Khóa học Khai phóng mà doanh nghiệp đang triển khai. 
-                Thông qua hệ thống này, Thầy từng bước đào tạo ra những người đi sau, 
+                Từ 2016, Thầy bắt đầu viết Bộ sách Thời đại Khai phóng để trang bị tầm nhìn sâu rộng cho con người.
+                Từ năm 2019, Thầy chính thức xác lập danh xưng “Bậc Thầy” như là một trách nhiệm cá nhân đối với công
+                cuộc Khai phóng.
+                Thầy là tác giả chính của các Hệ thống Khóa học Khai phóng mà doanh nghiệp đang triển khai.
+                Thông qua hệ thống này, Thầy từng bước đào tạo ra những người đi sau,
                 và từng bước định hình lộ trình cũng như dòng chảy của những người Thầy.</br></br>
-                Tính từ thời điểm năm 2011 đến năm 2023, Thầy đã sáng lập hoặc tham ra sáng lập nhiều doanh nghiệp. 
-                Mỗi doanh nghiệp này đều là những bước thử nghiệm và những bước chuẩn bị cho một khía cạnh quan trọng của Thời đại Khai phóng. 
-                Đến tháng 5/2024, toàn bộ những ý tưởng, đường hướng, giải pháp, nguồn lực của các doanh nghiệp này được thống nhất lại trong một doanh nghiệp mới duy nhất: 
+                Tính từ thời điểm năm 2011 đến năm 2023, Thầy đã sáng lập hoặc tham ra sáng lập nhiều doanh nghiệp.
+                Mỗi doanh nghiệp này đều là những bước thử nghiệm và những bước chuẩn bị cho một khía cạnh quan trọng
+                của Thời đại Khai phóng.
+                Đến tháng 5/2024, toàn bộ những ý tưởng, đường hướng, giải pháp, nguồn lực của các doanh nghiệp này được
+                thống nhất lại trong một doanh nghiệp mới duy nhất:
                 Công ty Cổ phần Thời Đại Khai Phóng.</br></br>
                 Doanh nghiệp này giống như một bông hoa tuyết mà Thầy đã lựa chọn “để gió cuốn đi”…
             </p>
@@ -512,7 +556,26 @@
                 </div>
             </div>
         </div>
+        <a href="#top" class="go-top" data-go-top>
+            <img src="./assets/images/icon-scroll-top-hd.svg" alt="">
+        </a>
     </footer>
+    <script>
+        const header = document.querySelector("[data-header]");
+        const goTopBtn = document.querySelector("[data-go-top]");
+        window.addEventListener("scroll", function () {
+
+            if (window.scrollY >= 222) {
+                header.classList.add("active");
+                goTopBtn.classList.add("active");
+            } else {
+                header.classList.remove("active");
+                goTopBtn.classList.remove("active");
+            }
+
+        });
+
+    </script>
 </body>
 
 </html>
