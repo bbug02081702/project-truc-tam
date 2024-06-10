@@ -7,9 +7,9 @@
     <title>Thời đại khai phóng</title>
     <link rel="dns-preconnect" href="https://fonts.googleapis.com">
     <link rel="dns-preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link  href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <style>
-        @font-face {
+        /* @font-face {
             font-family: 'Inter';
             src: url('../fonts/Inter-Light.ttf') format('ttf');
             font-weight: 400;
@@ -70,7 +70,7 @@
             src: url('../fonts/Inter-Black.ttf') format('ttf');
             font-weight: 900;
             font-style: normal;
-        }
+        } */
 
         html {
             line-height: 1.5;
@@ -180,6 +180,10 @@
         }
 
         .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: var(--primary-bg);
             width: 100%;
             height: 90px;
             display: flex;
@@ -225,6 +229,7 @@
         }
 
         .header-banner {
+            margin-top: 90px;
             color: var(--primary-bg);
             width: 100%;
             height: auto;
@@ -321,8 +326,13 @@
         }
 
         .event-content-title {
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
             color: var(--primary-cl);
             margin-top: 24px;
+            margin-bottom: 4px;
             font-size: 20px;
             font-style: normal;
             font-weight: 500;
@@ -586,12 +596,12 @@
             </div>
             <div class="event-content-block">
                 <img src="./assets/images/thumbnailtwo.png" alt="event-thumbnails" class="event-thumbnails">
-                <h2 class="event-content-title">Ra mắt Ứng dụng KHAI PHÓNG</h2>
+                <h2 class="event-content-title">Ra mắt Bộ sách TẦM NHÌN KHAI PHÓNG</h2>
                 <a href="#" class="event-content-link">Tìm hiểu thêm</a>
             </div>
             <div class="event-content-block">
                 <img src="./assets/images/thumbnail.png" alt="event-thumbnails" class="event-thumbnails">
-                <h2 class="event-content-title">Ra mắt Ứng dụng KHAI PHÓNG</h2>
+                <h2 class="event-content-title">Ra mắt nền tảng TRỰC TÂM</h2>
                 <a href="#" class="event-content-link">Tìm hiểu thêm</a>
             </div>
         </div>

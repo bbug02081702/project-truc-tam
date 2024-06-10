@@ -96,7 +96,7 @@
         }
     }
 
-    @font-face {
+    /* @font-face {
         font-family: 'Inter';
         src: url('../fonts/Inter-Light.ttf') format('ttf');
         font-weight: 400;
@@ -157,7 +157,7 @@
         src: url('../fonts/Inter-Black.ttf') format('ttf');
         font-weight: 900;
         font-style: normal;
-    }
+    } */
 
     :root {
         --primary-bg: #FFF;
@@ -189,6 +189,10 @@
     }
 
     .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: var(--primary-bg);
         width: 100%;
         height: 90px;
         display: flex;
@@ -230,7 +234,7 @@
     }
 
     .header-banner-info {
-        margin-top: 6px;
+        margin-top: 96px;
         margin-bottom: 107px;
     }
 
@@ -266,8 +270,13 @@
     }
 
     .event-content-title {
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
         color: var(--primary-cl);
         margin-top: 24px;
+        margin-bottom: 4px;
         font-size: 20px;
         font-style: normal;
         font-weight: 500;
