@@ -217,7 +217,9 @@
         .navbar .nav-link:hover {
             color: #0284A4;
         }
-
+        .active-nav-link{
+            color: #0284A4;
+        }
         .header-banner {
             color: var(--primary-bg);
             width: 100%;
@@ -490,9 +492,9 @@
 </head>
 
 <body>
-    <header class="header container" data-header>
+    <header id="myNavLink" class="header container" data-header>
         <nav class="navbar">
-            <a href="./index.html" class="logo active">
+            <a href="./index.html" class="logo active-nav-link">
                 <img src="./assets/images/Logo.svg" width="216" height="47" alt="Logo thời đại khai phóng"
                     title="Logo thời đại khai phóng" loading="lazy" decoding="async" />
             </a>
@@ -658,6 +660,17 @@
 
         });
 
+    </script>
+    <script>
+    const headerNav = document.getElementById("myNavLink");
+    const btns = headerNav.getElementsByClassName("nav-link");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active-nav-link");
+      current[0].className = current[0].className.replace(" active-nav-link", "");
+      this.className += " active-nav-link";
+      });
+    }
     </script>
 </body>
 

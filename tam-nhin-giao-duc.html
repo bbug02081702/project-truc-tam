@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tầm nhìn giáo dục</title>
+</head>
+<style>
+    html {
+        line-height: 1.5;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+
+    input,
+    textarea,
+    select,
+    button {
+        outline: none;
+        font: inherit;
+    }
+
+    input {
+        line-height: normal;
+    }
+
+    label,
+    button {
+        cursor: poInter;
+        user-select: none !important;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    img,
+    picture,
+    video,
+    canvas,
+    svg {
+        display: block;
+        max-width: 100%;
+        user-select: none !important;
+    }
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        overflow-wrap: break-word;
+    }
+
+    /* Mobie: width < 740px */
+    @media only screen and (max-width: 46.1875em) {
+
+        input[type="color"],
+        input[type="date"],
+        input[type="datetime"],
+        input[type="datetime-local"],
+        input[type="email"],
+        input[type="month"],
+        input[type="number"],
+        input[type="password"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="text"],
+        input[type="time"],
+        input[type="url"],
+        input[type="week"],
+        select:focus,
+        textarea {
+            font-size: 16px;
+        }
+    }
+
+    @font-face {
+        font-family: 'Inter';
+        src: url('../fonts/Inter-Light.ttf') format('ttf');
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Inter';
+        src: url('../fonts/Inter-Regular.ttf') format('ttf');
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Inter';
+        src: url('../fonts/Inter-Medium.ttf') format('ttf');
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Inter';
+        src: url('../fonts/Inter-SemiBold.ttf') format('ttf');
+        font-weight: 600;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Inter';
+        src: url('../fonts/Inter-Bold.ttf') format('ttf');
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'InterExtraBold';
+        src: url('../fonts/Inter-SemiBold.ttf') format('ttf');
+        font-weight: 600;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'InterExtraBold';
+        src: url('../fonts/Inter-ExtraBold.ttf') format('ttf');
+        font-weight: 800;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'InterExtraBold';
+        src: url('../fonts/Inter-ExtraBold.ttf') format('ttf');
+        font-weight: 800;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Inter-Black';
+        src: url('../fonts/Inter-Black.ttf') format('ttf');
+        font-weight: 900;
+        font-style: normal;
+    }
+
+    :root {
+        --primary-bg: #FFF;
+        --primary-cl: #000;
+    }
+
+    body {
+        background-color: var(--primary-bg);
+        color: var(--primary-cl);
+        font-size: 15px;
+        font-family: 'Inter', sans-serif;
+        ;
+        font-weight: 400;
+    }
+
+    .container {
+        display: block;
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 80px;
+    }
+
+    .container-content {
+        display: block;
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .header {
+        width: 100%;
+        height: 90px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-shrink: 0;
+    }
+
+    .navbar {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .navbar .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar .nav-list {
+        display: flex;
+        align-items: center;
+        gap: 34px;
+    }
+
+    .navbar .nav-link {
+        color: var(--primary-cl);
+        transition: linear 0.25s;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .navbar .nav-link:hover {
+        color: #0284A4;
+    }
+
+    .header-banner-info {
+        margin-top: 6px;
+        margin-bottom: 107px;
+    }
+
+    .header-banner-info .banner-img-top {
+        border-radius: 8px;
+        width: 100%;
+        max-width: 900px;
+        height: 430px;
+        flex-shrink: 0;
+    }
+
+    .header-banner-info .info-title {
+        margin-top: 37px;
+        margin-bottom: 22px;
+        text-align: center;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -1px;
+    }
+    .table-of-content{
+        color: #000;
+        text-align: center;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 45px;
+        text-transform: uppercase;
+    }
+    .info-content {
+        margin-top: 13px;
+        color: #555;
+        text-align: justify;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 33px;
+    }
+
+
+    .footer {
+        border-top: 1px solid #E6E6E6;
+        padding-top: 45px;
+        padding-bottom: 51px;
+        background-color: #F9F9F9;
+        width: 100%;
+        max-width: 1440px;
+        height: 264px;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer .footer-left-content {
+        width: 406px;
+    }
+
+    .footer .footer-left-content .footer-left-top .footer-left-top-title {
+        color: #000;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 30px;
+        letter-spacing: -0.4px;
+    }
+
+    .footer-left-bottom-content {
+        margin-top: 8px;
+        color: #000;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22.5px;
+        letter-spacing: -0.3px;
+    }
+
+    .footer-center-content {
+        display: flex;
+        width: 100%;
+        max-width: 301px;
+        flex-direction: column;
+    }
+
+    .footer-center-bottom-content {
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .footer-center-bottom-txt {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .footer-center-bottom-txt .footer-link-center-bottom-txt {
+        color: #000;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22.5px;
+        letter-spacing: -0.3px;
+    }
+
+    .footer-center-bottom-txt .footer-center-bottom-icon {
+        width: 25px;
+        height: 25px;
+        flex-shrink: 0;
+        border-radius: 100%;
+    }
+
+    .footer-right-content {
+        width: 100%;
+        max-width: 263px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-right-top-title {
+        color: #000;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 25.5px;
+        letter-spacing: -0.34px;
+    }
+
+    .footer-right-top-bottom {
+        margin-top: 19px;
+        display: flex;
+        gap: 25px;
+    }
+
+    .footer-right-top-bottom-left {
+        color: #000;
+        text-align: center;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22.5px;
+        letter-spacing: -0.3px;
+    }
+
+    .footer-right-top-bottom-left .footer-img-barcode-one {
+        margin-top: 6px;
+        width: 84px;
+        height: 81px;
+        flex-shrink: 0;
+    }
+
+    .footer-right-top-bottom-right {
+        color: #000;
+        text-align: center;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22.5px;
+        letter-spacing: -0.3px;
+    }
+
+    .footer-right-top-bottom-right .footer-img-barcode-one {
+        margin-top: 6px;
+        width: 84px;
+        height: 81px;
+        flex-shrink: 0;
+    }
+
+    .go-top {
+        position: fixed;
+        bottom: 335px;
+        right: 133px;
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        display: grid;
+        place-items: center;
+        font-size: 18px;
+        box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.5);
+        opacity: 0;
+        transform: translateY(10px);
+        visibility: hidden;
+        transition: var(--transition);
+    }
+
+    .go-top.active {
+        opacity: 0.8;
+        transform: translateY(0);
+        visibility: visible;
+    }
+
+    .go-top:is(:hover, :focus) {
+        opacity: 1;
+    }
+</style>
+
+<body>
+    <header class="header container" data-header>
+        <nav class="navbar">
+            <a href="./index.html" class="logo">
+                <img src="./assets/images/Logo.svg" width="216" height="47" alt="Logo thời đại khai phóng"
+                    title="Logo thời đại khai phóng" loading="lazy" decoding="async" />
+            </a>
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="./ve-chung-toi.html" title="Về chúng tôi" class="nav-link">Về chúng tôi</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./tu-sach-thoi-dai-khai-phong.html" title="Tủ sách TĐKP" class="nav-link">Tủ sách TĐKP</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./he-thong-cac-khoa-hoc.html" title="Hệ thống khóa học" class="nav-link">Hệ thống khóa
+                        học</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./du-an.html" title="Dự án" class="nav-link">Dự án</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./hop-tac.html" title="Hợp tác" class="nav-link">Hợp tác</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./nguoi-lanh-dao-khai-phong.html" title="Người lãnh đạo Khai Phóng" class="nav-link">Người
+                        lãnh đạo Khai Phóng</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="header-banner-info container-content">
+        <img src="./assets/images/banner-info.png" alt="" class="banner-img-top container-content">
+        <h1 class="info-title">Tầm nhìn Giáo dục</h1>
+        <p class="table-of-content">MỤC LỤC</p>
+        <p class="info-content">Lời của người chấp bút	</br></br>
+            <b>Chương 01:</b> Bản chất của giáo dục</br>
+            Tầm quan trọng của Giáo dục</br>
+            Động cơ chân chính để làm giáo dục</br>
+            Mục đích chân chính của giáo dục</br>
+            Bản chất của Dục và Giáo dục</br></br>
+
+            <b>Chương 02:</b> Chủ thể và phương tiện của giáo dục</br>
+            Chủ thể của sự giáo dục</br>
+            Phương tiện thực sự của Giáo dục</br></br>
+
+            <b>Chương 03:</b> Giáo dục trong thực tiễn cuộc sống</br>
+            Các cấp độ của Dục</br>
+            Vai trò của Trí tuệ, Phẩm hạnh, Bản lĩnh đối với hoạt động giáo dục</br>
+            Quán xét Giáo dục trong thực tiễn đời sống</br></br>
+
+            <b>Chương 04:</b> Giáo dục dưới góc nhìn tổng thể</br>
+            Đời sống Dục lạc và đời sống Hạnh phúc</br>
+            Giáo dục theo tầm nhìn Quốc gia - Thời đại</br>
+            Giáo dục theo tầm nhìn Nhân loại - Tôn giáo</br>
+            Giáo dục dưới góc nhìn Tâm linh</br></br>
+
+            <b>Chương 05:</b>  Lộ trình giáo dục tự thân</br>
+            Nấc thang thứ nhất: Sự sinh ra của Dục</br>
+            Nấc thang thứ hai: Sự vận hành của Dục</br>
+            Nấc thang thứ ba: Sự giao tranh giữa Dục và các phương tiện Giáo dục</br>
+            Nấc thang thứ tư: Phương tiện giáo dục trở thành Chủ thể giáo dục</br>
+            Nấc thang cuối cùng: Sự thức tỉnh của Chủ thể giáo dục</br></br>
+
+            <b>Chương 06:</b> Lộ trình giáo dục khách thể</br>
+            Nấc thang thứ nhất: Dục vô tình có tác dụng Giáo dục người khác</br>
+            Nấc thang thứ hai: Dục đặt vào việc Giáo dục người khác</br>
+            Nấc thang thứ ba: Mưu cầu Trí tuệ, Phẩm hạnh, Bản lĩnh thông qua việc Giáo dục người khác</br>
+            Nấc thang thứ tư: Trí tuệ, Phẩm hạnh, Bản lĩnh bộc lộ như là sự Giáo dục người khác</br>
+            Nấc thang cuối cùng: Phật tính viên thông với Phật tính ở người khác</br></br>
+
+            <b>Chương 07:</b> Giới – định – tuệ: Ba trụ cột trong tương tác giáo dục</br>
+            Giới</br>
+            Định</br>
+            Tuệ</br></br>
+
+            <b>Chương 08:</b> Giải pháp tổng thể cho nền giáo dục</br>
+            Ba trụ cột Giáo dục của một Nền giáo dục</br>
+            Ba nguồn lực xã hội để xây dựng một Nền giáo dục Chân chính</br>
+            Ba giải pháp trực tiếp để xây dựng một Nền Giáo dục Chân chính</br></br>
+
+            10 Tuyên bố về giáo dục đích thực</br>
+            Giới thiệu sách</br>
+            Lời ngỏ từ tác giả</br></br>
+        </p>
+    </section>
+    <footer class="footer container">
+        <div class="footer-left-content">
+            <div class="footer-left-top">
+                <h2 class="footer-left-top-title">CÔNG TY CỔ PHẦN THỜI ĐẠI KHAI PHÓNG</h2>
+            </div>
+            <div class="footer-left-bottom-content">
+                <p class="footer-left-bottom-txt">
+                    Mã số thuế: 0110447062</br>
+                    Địa chỉ: S202S30 Solforest 2, Khu đô thị Ecopark</br>
+                    Email: tructamjsc@gmail.com</br>
+                    Hotline: 0773.393.393
+                </p>
+            </div>
+        </div>
+        <div class="footer-center-content">
+            <div class="footer-center-top">
+                <h2 class="footer-center-top-title">Trang liên kết</h2>
+            </div>
+            <div class="footer-center-bottom-content">
+                <div class="footer-center-bottom-txt">
+                    <img src="./assets/images/icon-footer-one.png" alt="" class="footer-center-bottom-icon">
+                    <a class="footer-link-center-bottom-txt">Fanpage Tâm Khai Sáng</a>
+                </div>
+                <div class="footer-center-bottom-txt">
+                    <img src="./assets/images/icon-footer-two.png" alt="" class="footer-center-bottom-icon">
+                    <a class="footer-link-center-bottom-txt">Fanpage Sự học Đích thực</a>
+                </div>
+                <div class="footer-center-bottom-txt">
+                    <img src="./assets/images/icon-footer-three.png" alt="" class="footer-center-bottom-icon">
+                    <a class="footer-link-center-bottom-txt">Fanpage Tủ sách Thời Đại Khai Phóng</a>
+                </div>
+                <div class="footer-center-bottom-txt">
+                    <img src="./assets/images/icon-footer-four.png" alt="" class="footer-center-bottom-icon">
+                    <a class="footer-link-center-bottom-txt">Mạng cộng đồng Trực Tâm</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-right-content">
+            <div class="footer-right-top-content">
+                <h2 class="footer-right-top-title">Quét mã QR để tải Ứng dụng</h2>
+            </div>
+            <div class="footer-right-top-bottom">
+                <div class="footer-right-top-bottom-left">
+                    Trực Tâm
+                    <img src="./assets/images/qrcode-truc-tam.png" alt="Qrcode trực tâm" class="footer-img-barcode-one">
+                </div>
+                <div class="footer-right-top-bottom-right">
+                    Khai Phóng
+                    <img src="./assets/images/qrcode-khai-phong.png" alt="Qrcode khai phong"
+                        class="footer-img-barcode-one">
+                </div>
+            </div>
+        </div>
+        <a href="#top" class="go-top" data-go-top>
+            <img src="./assets/images/icon-scroll-top-hd.svg" alt="">
+        </a>
+    </footer>
+    <script>
+        const header = document.querySelector("[data-header]");
+        const goTopBtn = document.querySelector("[data-go-top]");
+        window.addEventListener("scroll", function () {
+
+            if (window.scrollY >= 222) {
+                header.classList.add("active");
+                goTopBtn.classList.add("active");
+            } else {
+                header.classList.remove("active");
+                goTopBtn.classList.remove("active");
+            }
+
+        });
+
+    </script>
+</body>
+
+</html>

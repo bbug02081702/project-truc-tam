@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Về chúng tôi</title>
+    <title>Hệ thống khóa học phát triển năng lực văn hóa</title>
 </head>
 <style>
     html {
@@ -225,15 +225,14 @@
     .navbar .nav-link:hover {
         color: #0284A4;
     }
-    .active-nav-link{
-        color: #0284A4;
-    }
+
     .header-banner-info {
         margin-top: 6px;
         margin-bottom: 107px;
     }
 
     .header-banner-info .banner-img-top {
+        border-radius: 8px;
         width: 100%;
         max-width: 900px;
         height: 430px;
@@ -242,7 +241,7 @@
 
     .header-banner-info .info-title {
         margin-top: 37px;
-        margin-bottom: 122px;
+        margin-bottom: 22px;
         text-align: center;
         font-size: 50px;
         font-style: normal;
@@ -251,316 +250,33 @@
         letter-spacing: -1px;
     }
 
-    .header-banner-info .info-title-children {
+    .table-of-content {
         color: #000;
-        font-size: 40px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 44px;
-    }
-
-    .info-text-list {
-        margin-top: 40px;
-    }
-
-    .info-text-list>li {
-        list-style-type: disc;
-        color: #555;
-        text-align: justify;
-        font-size: 22px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 33px;
-    }
-
-    .core-values {
-        padding-top: 84px;
-        padding-bottom: 89px;
-        height: 464px;
-        flex-shrink: 0;
-        background-color: #F2F2F2;
-    }
-
-    .title-core-values {
-        display: flex;
-        width: 227px;
-        height: 46px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: #FFF;
-        background-color: #0D7D96;
         text-align: center;
-        font-size: 35px;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 45px;
+        text-transform: uppercase;
+    }
+
+    .info-content {
+        margin-top: 13px;
+        color: #555;
+        text-align: justify;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 33px;
+    }
+
+    .txt-ex {
+        color: #000;
+        font-size: 17px;
         font-style: normal;
         font-weight: 600;
-        line-height: 38.5px;
-    }
-
-    .content-img-core-values {
-        margin-top: 58px;
-        width: 870px;
-        height: 212px;
-    }
-
-    .vision-mission {
-        padding-top: 93px;
-        padding-bottom: 76px;
-    }
-
-    .title-v-m {
-        margin-bottom: 59px;
-        color: #000;
-        font-size: 40px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 44px;
-    }
-
-    .img-v-m {
-        width: 100%;
-        max-width: 849px;
-        height: 275px;
-        border-radius: 8px;
-        flex-shrink: 0;
-    }
-
-    .v-m-list {
-        margin-top: 59px;
-    }
-
-    .v-m-list>li {
-        list-style-type: disc;
-        color: #555;
-        text-align: justify;
-        font-size: 22px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 33px;
-    }
-
-    .product-system {
-        padding-top: 68px;
-        padding-bottom: 100px;
-        width: 100%;
-        max-width: 1440px;
-        height: 926px;
-        flex-shrink: 0;
-        background-color: #F2F2F2;
-    }
-
-    .title-product-system {
-        position: relative;
-        left: 52px;
-        color: #000;
-        font-size: 40px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 44px;
-    }
-
-    .content-product-system {
-        gap: 34px;
-        margin-top: 50px;
-        display: flex;
-        align-items: center;
-    }
-
-    .content-product-system-left {
-        gap: 38px;
-        display: flex;
-        flex-direction: column;
-        width: 479px;
-        height: 664px;
-
-    }
-
-    .content-product-system-left .system-left-top {
-        display: flex;
-        width: 479px;
-        height: 181px;
-        padding: 25px 36px 20px 35px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 25px;
-        flex-shrink: 0;
-        border-radius: 12px;
-        background-color: #FFF;
-        box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.10), 0px 0px 15px 0px rgba(0, 0, 0, 0.10);
-    }
-
-    .content-product-system-left .system-left-top .title-system-left-top {
-        color: #000;
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        letter-spacing: -0.64px;
-    }
-
-    .content-system-left-top {
-        color: #555;
-        text-align: justify;
-        font-size: 22px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 33px;
-    }
-
-    .content-product-system-left .system-left-bottom {
-        display: flex;
-        width: 479px;
-        height: 445px;
-        padding: 25px 36px 20px 35px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 25px;
-        flex-shrink: 0;
-        border-radius: 12px;
-        background-color: #FFF;
-        box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.10), 0px 0px 15px 0px rgba(0, 0, 0, 0.10);
-    }
-
-    .title-system-left-bottom {
-        color: #000;
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        letter-spacing: -0.64px;
-    }
-
-    .content-system-left-bottom {
-        color: #555;
-        text-align: justify;
-        font-size: 22px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 33px;
-    }
-
-    .content-product-system-right {
-        gap: 38px;
-        display: flex;
-        flex-direction: column;
-        width: 479px;
-        height: 664px;
-    }
-
-    .content-product-system-right .system-right-top {
-        display: flex;
-        width: 479px;
-        height: 424px;
-        padding: 25px 36px 20px 35px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 25px;
-        flex-shrink: 0;
-        border-radius: 12px;
-        background-color: #FFF;
-        box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.10), 0px 0px 15px 0px rgba(0, 0, 0, 0.10);
-    }
-
-    .content-product-system-right .system-right-top .title-system-right-top {
-        color: #000;
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        letter-spacing: -0.64px;
-    }
-
-    .content-product-system-right .system-right-top .content-system-right-bottom {
-        color: #555;
-        text-align: justify;
-        font-size: 22px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 33px;
-    }
-
-    .content-product-system-right .system-right-bottom {
-        display: flex;
-        width: 479px;
-        height: 202px;
-        padding: 25px 36px 20px 35px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 25px;
-        flex-shrink: 0;
-        border-radius: 12px;
-        background-color: #FFF;
-        box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.10), 0px 0px 15px 0px rgba(0, 0, 0, 0.10);
-    }
-
-    .content-product-system-right .title-system-right-bottom-top {
-        color: #000;
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        letter-spacing: -0.64px;
-    }
-
-    .content-product-system-right .system-right-bottom .content-system-right-bottom-top {
-        color: #555;
-        text-align: justify;
-        font-size: 22px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 33px;
-    }
-
-    .projects {
-        padding-top: 86px;
-        padding-bottom: 198px;
-    }
-
-    .projects .title-projects {
-        position: relative;
-        left: 52px;
-        color: #000;
-        font-size: 40px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 44px;
-    }
-
-    .projects .content-projects {
-        margin-top: 66px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 96px;
-    }
-
-    .content-projects .content-projects-left .content-projects-left-icon {
-        width: 96px;
-        height: auto;
-        flex-shrink: 0;
-    }
-
-    .content-projects .content-projects-right {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-    }
-
-    .content-projects .content-projects-right-top {
-        color: #000;
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 48px;
-    }
-
-    .content-projects .content-projects-right-bottom {
-        color: #555;
-        text-align: justify;
-        font-size: 22px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 33px;
+        line-height: 25.5px;
+        letter-spacing: -0.34px;
     }
 
     .footer {
@@ -721,9 +437,9 @@
 </style>
 
 <body>
-    <header id="myNavLink" class="header container" data-header>
+    <header class="header container" data-header>
         <nav class="navbar">
-            <a href="./index.html" class="logo active-nav-link">
+            <a href="./index.html" class="logo">
                 <img src="./assets/images/Logo.svg" width="216" height="47" alt="Logo thời đại khai phóng"
                     title="Logo thời đại khai phóng" loading="lazy" decoding="async" />
             </a>
@@ -753,101 +469,63 @@
     </header>
     <section class="header-banner-info container-content">
         <img src="./assets/images/banner-info.png" alt="" class="banner-img-top container-content">
-        <h1 class="info-title">Công ty cổ phần Thời Đại Khai Phóng</h1>
-        <h2 class="info-title-children">Tổng quan</h2>
-        <ul class="info-text-list">
-            <li>Công ty Cổ phần Thời Đại Khai Phóng được Sáng lập vào Tháng 5/2024,
-                sự sáp nhập và thống nhất các Ý tưởng, Giá trị và Nguồn lực của 3 Công ty:
-                Công ty Cổ phần Tâm Khai sáng (Thành lập năm 2016), Công ty Cổ phần Giáo dục Đích thực
-                (Thành lập năm 2020) và Công ty Cổ phần Trực Tâm (Thành lập năm 2023).</li>
-            <li>Quy mô Nhân sự ở thời điểm Tháng 5/2024: 30 nhân sự.</li>
-        </ul>
-    </section>
-    <section class="core-values container">
-        <h1 class="title-core-values container-content">Giá trị cốt lõi</h1>
-        <img src="./assets/images/content-core-values.png" alt="" class="content-img-core-values container-content">
-    </section>
-    <section class="vision-mission container-content">
-        <h2 class="title-v-m">Tầm nhìn và sứ mệnh</h2>
-        <img src="./assets/images/img-vision-mission.png" alt="" class="img-v-m">
-        <ul class="v-m-list">
-            <li>Định hướng, Thúc đẩy và cùng với các tổ chức hay cá nhân khác góp phần Xây dựng một Hệ sinh thái
-                Khai phóng ở quy mô Toàn dân – Toàn diện – Toàn cầu, với mục tiêu năm 2051 đạt được 1 tỷ người tham gia
-                học tập,
-                trải nghiệm và làm việc trong Hệ sinh thái Khai phóng.
-            </li>
-            <li>Định hướng, Thúc đẩy và cùng với các tổ chức hay cá nhân khác góp phần Xây dựng dân tộc Việt Nam trở
-                thành một
-                “Dân tộc Bậc Thầy”, với mục tiêu năm 2051 đạt được 1 triệu người Việt Nam làm việc trong các tư cách
-                Giáo viên
-                Khai phóng, Chuyên gia Khai phóng hay Bậc thầy Khai phóng.
-            </li>
-            <li>Định hướng, Thúc đẩy và cùng với các tổ chức, cá nhân khác góp phần Định hình Thế kỷ XXI của nhân loại
-                trở thành
-                Thời đại Khai phóng, đưa Tinh thần Khai phóng vào và tạo ra sự thay đổi sâu sắc trong tất cả các lĩnh
-                vực quan
-                trọng trong đời sống xã hội như Giáo dục, Kinh tế, Văn hóa, Nghệ thuật, Khoa học Kỹ thuật…
-            </li>
-        </ul>
-    </section>
-    <section class="product-system container">
-        <h1 class="title-product-system container-content">
-            Hệ thống sản phẩm
-        </h1>
-        <div class="content-product-system container-content">
-            <div class="content-product-system-left">
-                <div class="system-left-top">
-                    <h3 class="title-system-left-top">Sản phẩm Phụ trợ</h3>
-                    <p class="content-system-left-top">Tủ sách Thời Đại Khai Phóng</p>
-                </div>
-                <div class="system-left-bottom">
-                    <h3 class="title-system-left-bottom">Sản phẩm Chuyên sâu</h3>
-                    <p class="content-system-left-bottom">Ba Hệ thống Khóa học phát triển Năng lực Trí tuệ,
-                        Năng lực Tâm thức, Năng lực Văn hóa. Các mức độ cơ bản được triển khai Trực tuyến trên nền tảng
-                        app Trực Tâm ,
-                        và các mức độ dành cho Chuyên gia sẽ được triển khai trong Hệ thống Đào tạo nội bộ và Hệ thống
-                        Đào tạo Bậc Thầy.
-                    </p>
-                </div>
-            </div>
-            <div class="content-product-system-right">
-                <div class="system-right-top">
-                    <h3 class="title-system-right-top">Sản phẩm Phổ cập</h3>
-                    <p class="content-system-right-bottom">Ba Hệ thống Khóa học phát triển Năng lực Hạnh phúc,
-                        Năng lực Tự chủ và Năng lực Khai phóng, được triển khai trên nền tảng app Khai phóng,
-                        dưới định dạng những bài học và thực hành thú vị, linh hoạt, thực tiễn,
-                        có tính hiệu quả cao và có thể dễ dàng tiếp cận tới hàng triệu người học không phân biệt tuổi
-                        tác,
-                        trình độ, ngôn ngữ, văn hóa, vùng miền.
-                    </p>
-                </div>
-                <div class="system-right-bottom">
-                    <h3 class="title-system-right-bottom-top">Sản phẩm Cao cấp</h3>
-                    <p class="content-system-right-bottom-top">Bộ Khóa học cao cấp, đặc biệt, riêng biệt dành cho Doanh
-                        nhân,
-                        Lãnh đạo, Chuyên gia, Bậc thầy.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="projects container">
-        <h1 class="title-projects container-content">
-            Các dự án
-        </h1>
-        <div class="content-projects container-content">
-            <div class="content-projects-left">
-                <img src="./assets/images/icon-sologan-one.png" alt="" class="content-projects-left-icon">
-            </div>
-            <div class="content-projects-right">
-                <div class="content-projects-right-top">
-                    Dự án Trực Tâm
-                </div>
-                <div class="content-projects-right-bottom">
-                    Dự án Mạng Cộng đồng Chuyển hóa trực tuyến trong sạch,
-                    lành mạnh, tử tế và giàu có các giá trị nhân văn cho con người.
-                </div>
-            </div>
+        <h1 class="info-title">Hệ thống khóa học</br>
+            PHÁT TRIỂN NĂNG LỰC VĂN HÓA</h1>
+        <p class="info-content">Văn hóa là một phạm trù cực kỳ rộng lớn và quan trọng trong tư tưởng,
+            nhận thức của xã hội nói riêng và trong nền văn minh nhân loại nói chung. Đến mức, trong nhiều trường hợp,
+            năng lực văn hóa có thể đại diện cho trình độ, tầm vóc, nhân cách hay tư cách của một con người.</br></br>
+
+            Tuy nhiên, cần phải hiểu rộng ra, rằng Văn hóa không phải là những nấc thang nên/ cần/ phải theo đuổi hay
+            khẳng định. Văn hóa còn là chìa khóa của một đời sống nhân văn, sâu sắc, ý nghĩa cho riêng mỗi con người.
+            Văn hóa còn là một nguồn mạch của truyền thống dân tộc,
+            đã kết nối vào trao truyền những giá trị sống tốt đẹp giữa người với người, giữa thế hệ với thế hệ</br></br>
+
+            Về căn bản, Văn hóa có thể được hiểu là sự hóa hiện của những vẻ đẹp nhân bản tàng ẩn bên trong con người.
+            Sự hóa hiện đó có thể thông qua nhiều hình thái biểu hiện như văn học, âm nhạc, hội họa, điêu khắc, điện
+            ảnh, kiến trúc… Và thậm chí, Văn hóa còn được thể hiện một cách thâm trầm, hùng tráng thông qua địa lý, lịch
+            sử, chính trị, tôn giáo.
+            Rõ ràng rằng văn hóa có thể được phát hiện, được tìm thấy từ những vết tích nhỏ nhất của nền văn minh con
+            người.</br></br>
+
+            Để có thể tận hưởng được sự giàu có, đủ đầy của Văn hóa, đặc biệt là những tầng mức Văn hóa có chiều sâu đã
+            được cả nhân loại tích lũy, con người nhất thiết phải được Phát triển, được Nâng cao Năng lực Văn hóa.
+            Chỉ cần phát triển, nâng cao Năng lực Văn hóa đủ tầm vóc, con người có thể tận hưởng được những thang bậc
+            Hạnh phúc sâu sắc và bền vững của cả nhân loại trong hàng ngàn năm lịch sử.</br></br>
+
+            Ý thức được tầm quan trọng của Văn hóa đối với đời sống cá nhân và sự ổn định của xã hội,
+            Thầy Trần Thế Công cùng đội ngũ nhân sự đã dành nhiều thời gian và tâm huyết để trải nghiệm, để thấu hiểu,
+            và để xây dựng một Hệ thống Khóa học nhằm Phát triển Năng lực Văn hóa cho con người, đặc biệt là người Việt
+            Nam,
+            cũng như góp phần khẳng định và trao truyền những giá trị văn hóa sâu sắc của dân tộc.</br></br>
+
+            Đây là một Hệ thống khóa học giúp Phát triển được đầy đủ các yếu tố Văn hóa cá nhân, Văn hóa tự nhiên,
+            Văn hóa dân gian vùng miền, Văn hóa Tri thức và Văn hóa Thời đại, cũng như phát triển song song và đồng đều
+            ba phương diện của Năng lực Văn hóa:
+            Năng lực Cảm nhận Văn hóa, Năng lực Biểu đạt Văn hóa, Năng lực Sáng tạo Văn hóa.</br></br>
+
+            Ba Khóa học đầu tiên với 9 học phần sẽ được triển khai trên nền tảng Mạng Cộng đồng Chuyển hóa Trực Tâm,
+            giúp học viên tự trang bị,
+            tự trải nghiệm và tự hình thành những năng lực Văn hóa cơ bản, đủ để học viên có thể xây
+            dựng và định hình một đời sống nội tâm có chiều sâu và có nhiều tiềm năng hưởng thụ Văn hóa.
+            Ba Khóa học tiếp theo sẽ học trong sự tương tác và đồng hành của người hướng dẫn, tập trung
+            phát triển các Khía cạnh Văn hóa Xã hội, giúp học viên xây dựng và định hình nên một
+            Nhân cách hay Tư cách có Tầm vóc Đạo đức. Các Khóa học chuyên sâu sẽ được hướng dẫn Trực tiếp,
+            nhằm hỗ trợ, định hướng, khai mở để học viên có khả năng tự định hướng, tự thúc đẩy, tự phát triển
+            đời sống Nghệ thuật mà không hề tách lìa khỏi những giá trị Văn hóa, Nhân bản phổ quát chung của dân
+            tộc hay của nhân loại.</br>
+        </p>
+        <center><img style="margin-top: 71px; width: 910px; height: 618px; display: none;"
+                src="./assets/images/he-thong-khoa-hoc-giao-duc.png" alt="" class="img-content-ex"></center>
+        <div class="content-qr-ex"
+            style="display: flex; align-items: center; justify-content: center; flex-direction: column; margin-top: 71px; gap: 22px;">
+            <p class="txt-ex">
+                Quét mã QR để tải Ứng dụng Khai Phóng
+            </p>
+            <img style="width: 84px; height: 81px;" src="./assets/images/qrcode-khai-phong.png" alt=""
+                class="img-download">
+            <p class="txt-ex">
+                (Hoặc cung cấp link tìm hiểu)
+            </p>
         </div>
     </section>
     <footer class="footer container">
@@ -923,17 +601,6 @@
         });
 
     </script>
-    <script>
-        const headerNav = document.getElementById("myNavLink");
-        const btns = headerNav.getElementsByClassName("nav-link");
-        for (var i = 0; i < btns.length; i++) {
-          btns[i].addEventListener("click", function() {
-          var current = document.getElementsByClassName("active-nav-link");
-          current[0].className = current[0].className.replace(" active-nav-link", "");
-          this.className += " active-nav-link";
-          });
-        }
-        </script>
 </body>
 
 </html>
