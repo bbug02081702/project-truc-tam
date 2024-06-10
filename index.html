@@ -5,7 +5,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thời đại khai phóng</title>
+    <link rel="dns-preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link  href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <style>
+        @font-face {
+            font-family: 'Inter';
+            src: url('../fonts/Inter-Light.ttf') format('ttf');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Inter';
+            src: url('../fonts/Inter-Regular.ttf') format('ttf');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Inter';
+            src: url('../fonts/Inter-Medium.ttf') format('ttf');
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Inter';
+            src: url('../fonts/Inter-SemiBold.ttf') format('ttf');
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Inter';
+            src: url('../fonts/Inter-Bold.ttf') format('ttf');
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'InterExtraBold';
+            src: url('../fonts/Inter-SemiBold.ttf') format('ttf');
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'InterExtraBold';
+            src: url('../fonts/Inter-ExtraBold.ttf') format('ttf');
+            font-weight: 800;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'InterExtraBold';
+            src: url('../fonts/Inter-ExtraBold.ttf') format('ttf');
+            font-weight: 800;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Inter-Black';
+            src: url('../fonts/Inter-Black.ttf') format('ttf');
+            font-weight: 900;
+            font-style: normal;
+        }
+
         html {
             line-height: 1.5;
             box-sizing: border-box;
@@ -92,69 +158,6 @@
             }
         }
 
-        @font-face {
-            font-family: 'Inter';
-            src: url('../fonts/Inter-Light.ttf') format('ttf');
-            font-weight: 400;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'Inter';
-            src: url('../fonts/Inter-Regular.ttf') format('ttf');
-            font-weight: 400;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'Inter';
-            src: url('../fonts/Inter-Medium.ttf') format('ttf');
-            font-weight: 500;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'Inter';
-            src: url('../fonts/Inter-SemiBold.ttf') format('ttf');
-            font-weight: 600;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'Inter';
-            src: url('../fonts/Inter-Bold.ttf') format('ttf');
-            font-weight: 700;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'InterExtraBold';
-            src: url('../fonts/Inter-SemiBold.ttf') format('ttf');
-            font-weight: 600;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'InterExtraBold';
-            src: url('../fonts/Inter-ExtraBold.ttf') format('ttf');
-            font-weight: 800;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'InterExtraBold';
-            src: url('../fonts/Inter-ExtraBold.ttf') format('ttf');
-            font-weight: 800;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'Inter-Black';
-            src: url('../fonts/Inter-Black.ttf') format('ttf');
-            font-weight: 900;
-            font-style: normal;
-        }
-
         :root {
             --primary-bg: #FFF;
             --primary-cl: #000;
@@ -164,8 +167,7 @@
             background-color: var(--primary-bg);
             color: var(--primary-cl);
             font-size: 15px;
-            font-family: 'Inter', sans-serif;
-            ;
+            font-family: 'Inter';
             font-weight: 400;
         }
 
@@ -217,9 +219,11 @@
         .navbar .nav-link:hover {
             color: #0284A4;
         }
-        .active-nav-link{
+
+        .active-nav-link {
             color: #0284A4;
         }
+
         .header-banner {
             color: var(--primary-bg);
             width: 100%;
@@ -332,9 +336,11 @@
             font-weight: 500;
             line-height: 30px;
         }
-        .event-content-container .event-content-block .event-content-link:hover{
+
+        .event-content-container .event-content-block .event-content-link:hover {
             color: #0284A4;
         }
+
         .footer {
             border-top: 1px solid #E6E6E6;
             padding-top: 45px;
@@ -664,15 +670,15 @@
 
     </script>
     <script>
-    const headerNav = document.getElementById("myNavLink");
-    const btns = headerNav.getElementsByClassName("nav-link");
-    for (var i = 0; i < btns.length; i++) {
-      btns[i].addEventListener("click", function() {
-      var current = document.getElementsByClassName("active-nav-link");
-      current[0].className = current[0].className.replace(" active-nav-link", "");
-      this.className += " active-nav-link";
-      });
-    }
+        const headerNav = document.getElementById("myNavLink");
+        const btns = headerNav.getElementsByClassName("nav-link");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active-nav-link");
+                current[0].className = current[0].className.replace(" active-nav-link", "");
+                this.className += " active-nav-link";
+            });
+        }
     </script>
 </body>
 
