@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tủ sách thời đại khai phóng</title>
+    <title>Dự án</title>
 </head>
 <style>
     html {
@@ -178,12 +178,11 @@
         padding: 0 80px;
     }
 
-    .container-content-grid {
+    .container-content {
         display: block;
         width: 100%;
-        max-width: 1440px;
+        max-width: 900px;
         margin: 0 auto;
-        padding: 0 130px;
     }
 
     .header {
@@ -227,12 +226,19 @@
         color: #0284A4;
     }
 
-    .header-banner-info {
+    .projects-main {
         margin-top: 6px;
         margin-bottom: 107px;
     }
 
-    .header-banner-info .info-title {
+    .projects-main .banner-img-top {
+        width: 100%;
+        max-width: 900px;
+        height: 430px;
+        flex-shrink: 0;
+    }
+
+    .projects-main .info-title {
         margin-top: 37px;
         margin-bottom: 122px;
         text-align: center;
@@ -243,41 +249,122 @@
         letter-spacing: -1px;
     }
 
-    .header-banner-info .event-content-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 3fr));
-        gap: 32px;
-    }
-
-    .event-highlight .event-content-block {
+    .projects-content {
+        gap: 136px;
         display: flex;
-        width: 372px;
-        height: auto;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        justify-content: space-between;
     }
 
-    .event-highlight .event-content-block .event-thumbnails {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
+    .projects-content .projects-content-top {
+        display: flex;
+        gap: 64px;
+        align-items: center;
+        justify-content: space-between;
     }
 
-    .event-content-title {
-        color: var(--primary-cl);
+    .projects-content-top .projects-content-top-left {
+        width: 505px;
+    }
+
+    .title-projects {
+        color: #000;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 48px;
+    }
+
+    .contents-projects {
         margin-top: 24px;
-        font-size: 20px;
+        color: #555;
+        text-align: justify;
+        font-size: 22px;
         font-style: normal;
-        font-weight: 500;
-        line-height: 30px;
+        font-weight: 400;
+        line-height: 33px;
     }
 
-    .event-content-container .event-content-block .event-content-link {
-        color: #828282;
-        font-size: 20px;
+    .links-project {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 44.5px;
+        gap: 29px;
+    }
+
+    .links-project .links-about {
+        font-size: 16px;
         font-style: normal;
         font-weight: 500;
-        line-height: 30px;
+        line-height: 24px;
+        color: var(--primary-bg);
+        max-width: 157px;
+        height: 37px;
+        border-radius: 5px;
+        background-color: #0284A4;
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* padding: 14px 24px; */
+    }
+
+    .projects-content-top-right {
+        width: 100%;
+        max-width: 425px;
+        height: 607px;
+    }
+
+    .links-experience {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        color: var(--primary-cl);
+        max-width: 188px;
+        height: 37px;
+        border-radius: 5px;
+        background-color: #C0C0C0;
+        ;
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* padding: 14px 24px; */
+    }
+
+    .projects-content-center {
+        display: flex;
+        gap: 69px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .projects-content-center-right .img-projects {
+        width: 436px;
+        height: 498px;
+    }
+
+    .projects-content-center-right {
+        width: 489px;
+    }
+
+    .projects-content-bottom {
+        display: flex;
+        gap: 69px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .projects-content-bottom-left {
+        width: 542px;
+    }
+
+    .projects-content-bottom-right .img-projects {
+        width: 382px;
+        height: 408px;
     }
 
     .footer {
@@ -414,7 +501,8 @@
     <header class="header container">
         <nav class="navbar">
             <a href="./index.html" class="logo">
-                <img src="./assets/images/Logo.svg" width="216" height="47" alt="Logo thời đại khai phóng" title="Logo thời đại khai phóng" loading="lazy" decoding="async" />
+                <img src="./assets/images/Logo.svg" width="216" height="47" alt="Logo thời đại khai phóng"
+                    title="Logo thời đại khai phóng" loading="lazy" decoding="async" />
             </a>
             <ul class="nav-list">
                 <li class="nav-item">
@@ -424,7 +512,8 @@
                     <a href="./tu-sach-thoi-dai-khai-phong.html" title="Tủ sách TĐKP" class="nav-link">Tủ sách TĐKP</a>
                 </li>
                 <li class="nav-item">
-                    <a href="./he-thong-cac-khoa-hoc.html" title="Hệ thống khóa học" class="nav-link">Hệ thống khóa học</a>
+                    <a href="./he-thong-cac-khoa-hoc.html" title="Hệ thống khóa học" class="nav-link">Hệ thống khóa
+                        học</a>
                 </li>
                 <li class="nav-item">
                     <a href="./du-an.html" title="Dự án" class="nav-link">Dự án</a>
@@ -438,43 +527,67 @@
             </ul>
         </nav>
     </header>
-    <section class="header-banner-info container-content-grid">
-        <h1 class="info-title">Hệ thống các khóa học</h1>
-        <div class="event-content-container">
-            <div class="event-content-block">
-                <img src="./assets/images/thumbnail.png" alt="event-thumbnails" class="event-thumbnails">
-                <h2 class="event-content-title">Ra mắt Ứng dụng KHAI PHÓNG</h2>
-                <a href="#" class="event-content-link">Tìm hiểu thêm</a>
+    <section class="projects-main container-content">
+        <h1 class="info-title">Các dự án</h1>
+        <div class="projects-content">
+            <div class="projects-content-top">
+                <div class="projects-content-top-left">
+                    <h2 class="title-projects">Dự án Trực Tâm</h2>
+                    <p class="contents-projects">
+                        Một Mạng xã hội Trực tuyến – Mạng Cộng đồng Chuyển hóa được xây dựng trên tinh thần Trực tâm,
+                        tạo không gian mạng xã hội trong sạch, lành mạnh, tử tế và giàu có các giá trị nhân văn cho con
+                        người.
+                        Trực Tâm được định hướng để trở thành nơi giao lưu, chia sẻ, học hỏi và vun bồi nên những con
+                        người Khai phóng.
+                        Trực Tâm phù hợp với những người đang hoạt động trong lĩnh vực Giáo dục, đang có nhu cầu rèn
+                        luyện/ phát triển bản thân, và cho những ai theo đuổi những giá trị truyền thống tích cực, tốt
+                        đẹp của dân tộc, của nhân loại.
+                    </p>
+                    <div class="links-project">
+                        <a href="#" class="links-about">Tìm hiểu Dự án</a>
+                        <a href="#" class="links-experience">Trải nghiệm Trực Tâm</a>
+                    </div>
+                </div>
+                <div class="projects-content-top-right">
+                    <img src="./assets/images/project-top.png" alt="" class="img-projects">
+                </div>
             </div>
-            <div class="event-content-block">
-                <img src="./assets/images/thumbnailtwo.png" alt="event-thumbnails" class="event-thumbnails">
-                <h2 class="event-content-title">Ra mắt Ứng dụng KHAI PHÓNG</h2>
-                <a href="#" class="event-content-link">Tìm hiểu thêm</a>
+            <div class="projects-content-center">
+                <div class="projects-content-center-left">
+                    <div class="projects-content-center-right">
+                        <img src="./assets/images/project-center.png" alt="" class="img-projects">
+                    </div>
+                </div>
+                <div class="projects-content-center-right">
+                    <h2 class="title-projects">Dự án Hạnh phúc Xanh</h2>
+                    <p class="contents-projects">
+                        Dự án mở nhằm Xây dựng Cộng đồng rộng mở và Định hướng mỗi con người trong đó phát triển và lựa
+                        chọn những hình thái
+                        Hạnh phúc sâu sắc, bền vững, hòa hợp và bảo tồn Thiên nhiên theo sáng kiến 5 Không - 5 Có.
+                        5 Không bao gồm: Không tiêu thụ, Không rác thải, Không nhiễm ô, Không xâm lấn, Không sát hại.
+                        5 Có bao gồm: Có Nhận thức, Có Tôn trọng, Có Học hỏi, Có Tận hưởng, Có Vun bồi.
+                    </p>
+                    <div class="links-project">
+                        <a href="#" class="links-about">Tìm hiểu Dự án</a>
+                    </div>
+                </div>
             </div>
-            <div class="event-content-block">
-                <img src="./assets/images/thumbnail.png" alt="event-thumbnails" class="event-thumbnails">
-                <h2 class="event-content-title">Ra mắt Ứng dụng KHAI PHÓNG</h2>
-                <a href="#" class="event-content-link">Tìm hiểu thêm</a>
-            </div>
-            <div class="event-content-block">
-                <img src="./assets/images/thumbnail.png" alt="event-thumbnails" class="event-thumbnails">
-                <h2 class="event-content-title">Ra mắt Ứng dụng KHAI PHÓNG</h2>
-                <a href="#" class="event-content-link">Tìm hiểu thêm</a>
-            </div>
-            <div class="event-content-block">
-                <img src="./assets/images/thumbnailtwo.png" alt="event-thumbnails" class="event-thumbnails">
-                <h2 class="event-content-title">Ra mắt Ứng dụng KHAI PHÓNG</h2>
-                <a href="#" class="event-content-link">Tìm hiểu thêm</a>
-            </div>
-            <div class="event-content-block">
-                <img src="./assets/images/thumbnail.png" alt="event-thumbnails" class="event-thumbnails">
-                <h2 class="event-content-title">Ra mắt Ứng dụng KHAI PHÓNG</h2>
-                <a href="#" class="event-content-link">Tìm hiểu thêm</a>
-            </div>
-            <div class="event-content-block">
-                <img src="./assets/images/thumbnail.png" alt="event-thumbnails" class="event-thumbnails">
-                <h2 class="event-content-title">Ra mắt Ứng dụng KHAI PHÓNG</h2>
-                <a href="#" class="event-content-link">Tìm hiểu thêm</a>
+            <div class="projects-content-bottom">
+                <div class="projects-content-bottom-left">
+                    <h2 class="title-projects">Dự án Hệ sinh thái Khai phóng</h2>
+                    <p class="contents-projects">
+                        Dự án mở nhằm xây dựng một Cộng đồng mở đủ lớn mạnh, sâu rộng,
+                        đủ tiện lợi và linh hoạt cho việc học tập, lao động, chung sống giữa người theo tinh thần Khai
+                        phóng.
+                        Qua đó định hình nên những nền tảng xã hội quan trọng cho Thời đại Khai phóng.
+                    </p>
+                    <div class="links-project">
+                        <a href="#" class="links-about">Tìm hiểu Dự án</a>
+                    </div>
+                </div>
+                <div class="projects-content-bottom-right">
+                    <img src="./assets/images/project-bottom.png" alt="" class="img-projects">
+                </div>
             </div>
         </div>
     </section>

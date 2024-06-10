@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tủ sách thời đại khai phóng</title>
+    <title>Hợp tác</title>
 </head>
 <style>
     html {
@@ -178,12 +178,11 @@
         padding: 0 80px;
     }
 
-    .container-content-grid {
+    .container-content {
         display: block;
         width: 100%;
-        max-width: 1440px;
+        max-width: 900px;
         margin: 0 auto;
-        padding: 0 130px;
     }
 
     .header {
@@ -232,6 +231,14 @@
         margin-bottom: 107px;
     }
 
+    .header-banner-info .banner-img-top {
+        border-radius: 8px;
+        width: 100%;
+        max-width: 900px;
+        height: 430px;
+        flex-shrink: 0;
+    }
+
     .header-banner-info .info-title {
         margin-top: 37px;
         margin-bottom: 122px;
@@ -243,16 +250,103 @@
         letter-spacing: -1px;
     }
 
-    .header-banner-info .event-content-container {
+    .info-content {
+        color: #555;
+        text-align: justify;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 33px;
+    }
+
+    .contact-us {
+        display: flex;
+        padding-top: 71px;
+        padding-bottom: 136px;
+        background-color: #F2F2F2;
+    }
+
+    .contact-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 56px;
+    }
+
+    .contact-left {
+        width: 466px;
+    }
+
+    .title-contact {
+        color: #000;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.8px;
+        margin-bottom: 24px;
+    }
+
+    #contact-form {
+        margin-top: 18px;
+    }
+
+    .contact-right {
+        width: 380px;
+    }
+
+    .contact-left .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .txt-label {
+        color: #000;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+    }
+
+    .btn-submit {
+        margin-top: 22px;
+        color: var(--primary-bg);
+        border: none;
+        display: flex;
+        width: 124px;
+        height: 38px;
+        padding: 16px 32px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        background-color: #0284A4;
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+        flex-shrink: 0;
+    }
+
+    .link-pages{
+        padding-top: 82px;
+        padding-bottom: 159px;
+    }
+    .link-pages .title-link-pages{
+        color: #000;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.8px;
+        margin-bottom: 63px;
+    }
+    .link-pages .event-content-container {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 3fr));
-        gap: 32px;
+        grid-template-columns: repeat(auto-fit, minmax(309px, 3fr));
+        gap: 30px;
     }
 
     .event-highlight .event-content-block {
         display: flex;
-        width: 372px;
-        height: auto;
+        width: 309px;
+        height: 167px;
         flex-direction: column;
         align-items: flex-start;
     }
@@ -414,7 +508,8 @@
     <header class="header container">
         <nav class="navbar">
             <a href="./index.html" class="logo">
-                <img src="./assets/images/Logo.svg" width="216" height="47" alt="Logo thời đại khai phóng" title="Logo thời đại khai phóng" loading="lazy" decoding="async" />
+                <img src="./assets/images/Logo.svg" width="216" height="47" alt="Logo thời đại khai phóng"
+                    title="Logo thời đại khai phóng" loading="lazy" decoding="async" />
             </a>
             <ul class="nav-list">
                 <li class="nav-item">
@@ -424,7 +519,8 @@
                     <a href="./tu-sach-thoi-dai-khai-phong.html" title="Tủ sách TĐKP" class="nav-link">Tủ sách TĐKP</a>
                 </li>
                 <li class="nav-item">
-                    <a href="./he-thong-cac-khoa-hoc.html" title="Hệ thống khóa học" class="nav-link">Hệ thống khóa học</a>
+                    <a href="./he-thong-cac-khoa-hoc.html" title="Hệ thống khóa học" class="nav-link">Hệ thống khóa
+                        học</a>
                 </li>
                 <li class="nav-item">
                     <a href="./du-an.html" title="Dự án" class="nav-link">Dự án</a>
@@ -438,42 +534,110 @@
             </ul>
         </nav>
     </header>
-    <section class="header-banner-info container-content-grid">
-        <h1 class="info-title">Hệ thống các khóa học</h1>
-        <div class="event-content-container">
+    <section class="header-banner-info container-content">
+        <img src="./assets/images/banner-info.png" alt="" class="banner-img-top container-content">
+        <h1 class="info-title">Mời hợp tác và đồng hành</h1>
+        <p class="info-content">Chắc chắn rằng việc mở ra một “Thời đại Khai phóng” cho xã hội nói riêng hay
+            Nhân loại nói chung là một công việc khổng lồ, một công cuộc vĩ đại. Và công cuộc ấy cần đến sự chung sức
+            của hàng triệu, hàng chục triệu những con người ưu tú, nhiệt huyết ở khắp khắp mọi nơi,
+            trên khắp khắp lĩnh vực hoạt động của đời sống. So với nguồn lực cần thiết để thúc đẩy công cuộc ấy,
+            chúng tôi biết rõ mình nhỏ bé thế nào.</br></br>
+            Dù vậy, một hòn tuyết lăn khổng lồ vẫn phải bắt đầu chỉ bằng một bông hoa tuyết nhỏ bé.
+            Một công cuộc vĩ đại vẫn phải bắt đầu chỉ bằng những đường hướng hay phác thảo đầu tiên.
+            Chúng tôi mạnh dạn chia sẻ những tầm nhìn, giá trị, định hướng hay sản phẩm của mình tới
+            rộng rãi công chúng giống như góp một bông hoa tuyết đầu tiên, hoặc giống như một bông hoa
+            tuyết trong những bông hoa tuyết đầu tiên. Và bông hoa tuyết ấy, mang theo sự tận tâm và
+            chân thành của cả đội ngũ, mang theo niềm tin vững chắc vào Tiềm năng của Đất nước và Cơ hội của Thời đại,
+            chúng tôi lựa chọn “để gió cuốn đi”…</br></br>
+            Chúng tôi hi vọng rằng bông hoa tuyết này sẽ thực sự chạm được tới những người khát cầu sự khai phóng chân
+            thật,
+            cho bản thân hay cho con em mình.</br></br>
+            Chúng tôi hi vọng rằng bông hoa tuyết này sẽ thực sự chạm tới những người có ý chí, có lý tưởng,
+            có khát vọng lớn lao và có tinh thần trách nhiệm, để cùng gánh vác hay thúc đẩy công cuộc ý nghĩa
+            này.</br></br>
+            Chúng tôi hi vọng rằng bông hoa tuyết này sẽ thực sự chạm được tới những người dành sự quan tâm sâu sắc đối
+            với sự nghiệp Giáo dục và phát triển con người,
+            cho sự nghiệp của mình hay cho sự tiến bộ của xã hội nói chung.</br></br>
+            Chúng tôi hi vọng rằng bông hoa tuyết này sẽ thực sự chạm được tới những Học giả, những Chuyên gia, những
+            Nhà giáo, những Bậc thầy đang theo đuổi triết lý Khai phóng,
+            để cùng xây dựng lên một Hệ thống lý thuyết và hệ thống Thực hành sâu sắc, hiệu quả hơn cho tất cả mọi
+            người.</br></br>
+            Chúng tôi hi vọng rằng bông hoa tuyết này sẽ thực sự chạm tới những người Quản lý, những người Lãnh đạo của
+            đất nước,
+            để có thể nhân lên nhanh chóng sức mạnh Khai phóng trong cộng đồng, trong xã hội.</br></br>
+            Chúng tôi hi vọng rằng còn có rất nhiều những trái tim, những khối óc dành cho công cuộc Khai phóng
+            này.</br></br>
+            Chúng tôi hi vọng rằng mỗi chúng ta sẽ cùng góp chút tâm huyết của mình và cùng “Để gió cuốn đi”…
+        </p>
+    </section>
+    <section class="contact-us container">
+        <div class="contact-container container-content">
+            <div class="contact-left">
+                <h2 class="title-contact">Liên hệ với chúng tôi</h2>
+                <p>Nếu có ý kiến đóng góp hoặc thắc mắc về vấn đề gì mời bạn vui lòng liên hệ với tôi.</p>
+                <form id="contact-form" method="POST" action="">
+                    <div class="form-group">
+                        <label for="name" class="txt-label">Họ tên</label>
+                        <input
+                            style="max-width: 295px; padding: 12px 16px;border: 1px solid #E0E0E0; box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05); border-radius:8px; margin: 8px 0; box-sizing: border-box; outline: none; font-family: Mulish;"
+                            type="text" name="fullname" placeholder="Nguyễn Văn A" autocomplete="name" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="txt-label">Địa chỉ email</label>
+                        <input
+                            style="width: 100%; padding: 12px 16px;border: 1px solid #E0E0E0; box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05); border-radius:8px; margin: 8px 0; box-sizing: border-box; outline: none; font-family: Mulish;"
+                            type="email" name="email" placeholder="nguyenvana@thoidaikhaiphong.com" autocomplete="email"
+                            required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="txt-label">Lời nhắn của bạn</label>
+                        <textarea
+                            style="width: 100%; padding: 12px 16px;border: 1px solid #E0E0E0; box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05); border-radius:8px; margin: 8px 0; box-sizing: border-box; outline: none;  font-family: Mulish;"
+                            rows="4" cols="10" name="message" placeholder="Nội dung" autocomplete="off"
+                            required=""></textarea>
+                    </div>
+                    <button type="submit" name="submit" class="btn-submit">Gửi</button>
+                </form>
+            </div>
+            <div class="contact-right">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.78444121504!2d105.91724067400699!3d20.961169990099005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135af55791a4507%3A0xa88b2b1b40cf579b!2sTo%C3%A0%20SO2%20Solforest!5e0!3m2!1svi!2s!4v1717988858050!5m2!1svi!2s"
+                    width="380" height="417" style="border: 1px solid #ABABAB;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+    <section class="link-pages container">
+        <h2 class="title-link-pages container-content">Các trang liên kết</h2>
+        <div class="content-link-pages event-content-container">
             <div class="event-content-block">
                 <img src="./assets/images/thumbnail.png" alt="event-thumbnails" class="event-thumbnails">
-                <h2 class="event-content-title">Ra mắt Ứng dụng KHAI PHÓNG</h2>
-                <a href="#" class="event-content-link">Tìm hiểu thêm</a>
-            </div>
-            <div class="event-content-block">
-                <img src="./assets/images/thumbnailtwo.png" alt="event-thumbnails" class="event-thumbnails">
-                <h2 class="event-content-title">Ra mắt Ứng dụng KHAI PHÓNG</h2>
+                <h2 class="event-content-title">Mạng cộng đồng Trực Tâm</h2>
                 <a href="#" class="event-content-link">Tìm hiểu thêm</a>
             </div>
             <div class="event-content-block">
                 <img src="./assets/images/thumbnail.png" alt="event-thumbnails" class="event-thumbnails">
-                <h2 class="event-content-title">Ra mắt Ứng dụng KHAI PHÓNG</h2>
+                <h2 class="event-content-title">Fanpage Tâm Khai Sáng</h2>
                 <a href="#" class="event-content-link">Tìm hiểu thêm</a>
             </div>
             <div class="event-content-block">
                 <img src="./assets/images/thumbnail.png" alt="event-thumbnails" class="event-thumbnails">
-                <h2 class="event-content-title">Ra mắt Ứng dụng KHAI PHÓNG</h2>
-                <a href="#" class="event-content-link">Tìm hiểu thêm</a>
-            </div>
-            <div class="event-content-block">
-                <img src="./assets/images/thumbnailtwo.png" alt="event-thumbnails" class="event-thumbnails">
-                <h2 class="event-content-title">Ra mắt Ứng dụng KHAI PHÓNG</h2>
+                <h2 class="event-content-title">Fanpage Sự học Đích thực</h2>
                 <a href="#" class="event-content-link">Tìm hiểu thêm</a>
             </div>
             <div class="event-content-block">
                 <img src="./assets/images/thumbnail.png" alt="event-thumbnails" class="event-thumbnails">
-                <h2 class="event-content-title">Ra mắt Ứng dụng KHAI PHÓNG</h2>
+                <h2 class="event-content-title">Fanpage Tủ sách Thời đại Khai Phóng</h2>
                 <a href="#" class="event-content-link">Tìm hiểu thêm</a>
             </div>
             <div class="event-content-block">
                 <img src="./assets/images/thumbnail.png" alt="event-thumbnails" class="event-thumbnails">
-                <h2 class="event-content-title">Ra mắt Ứng dụng KHAI PHÓNG</h2>
+                <h2 class="event-content-title">Blog của thầy Trần Thế Công</h2>
+                <a href="#" class="event-content-link">Tìm hiểu thêm</a>
+            </div>
+            <div class="event-content-block">
+                <img src="./assets/images/thumbnail.png" alt="event-thumbnails" class="event-thumbnails">
+                <h2 class="event-content-title">....</h2>
                 <a href="#" class="event-content-link">Tìm hiểu thêm</a>
             </div>
         </div>
